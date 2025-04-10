@@ -5,12 +5,54 @@
 
 }
 
+@media only screen and (max-width : 767px) {
+  h1 {
+    color: blue;
+  }
+
+  #no-burger-menu {
+    display: none;
+  }
+
+  #with-burger-menu {
+    display: block;
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1223px) and (orientation : landscape) {
+  h1 {
+    color: rgb(0, 255, 76);
+  }
+
+  #no-burger-menu {
+    display: none;
+  }
+
+  #with-burger-menu {
+    display: block;
+  }
+}
+
+@media only screen and (min-width : 1224px) {
+  h1 {
+    color: rgb(0, 0, 0);
+  }
+
+  #with-burger-menu {
+    display: none;
+  }
+
+  #no-burger-menu {
+    display: block;
+  }
+}
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #00ff4c;
+  background-color: #000000;
   min-height: 56px;
   display: flex;
   flex-direction: column;
@@ -32,7 +74,7 @@
 }
 
 .App-footer {
-  background-color: #0256fd;
+  background-color: #000000;
   min-height: 56px;
   display: flex;
   flex-direction: column;
@@ -45,6 +87,8 @@
 a {
   color: #0387ac;
   text-decoration: none;
+  text-transform: uppercase;
+  margin: 10px;
 }
 
 a:hover {
@@ -70,4 +114,54 @@ p {
 strong {
   font-family: "NunitoSans", sans-serif;
   font-weight: 600;
+}
+
+#page-wrap {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#with-burger-menu {
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+  align-self: self-end;
+  margin-right: 6px;
+
+}
+
+#no-burger-menu {
+  width: 60%;
+  height: 50px;
+  background-color: rgb(205, 176, 233);
+  align-self: self-end;
+  margin-right: 6px;
+
+}
+
+.bm-burger-button {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(226, 43, 67);
+  position: relative;
+}
+
+.bm-overlay {
+  top: 0;
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+.bm-item-list {
+  height: 80%;
+}
+
+.bm-menu {
+  background-color: #00ff4c67;
+  width: 60%;
+}
+
+.bm-menu-wrap {
+  margin-right: -124px;
+  top: 56px;
 }
