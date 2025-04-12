@@ -10,6 +10,7 @@ import { fallDown as Menu } from 'react-burger-menu';
 import './App.css';
 
 
+
 let styles = {
   bmMenuWrap: {
     height: 'max-content',
@@ -35,7 +36,6 @@ function ScrollToTop() {
 export default function App() {
   return (
     <div className="App">
-
       <header className="App-header">
         <nav id='navbar' className="navbar navbar-dark bg-dark">
           <span className="navbar-brand mb-0 h1" id='logo'>JOHN DOE</span>
@@ -73,7 +73,7 @@ export default function App() {
           <p><strong>John Doe</strong></p>
           <p>40 rue Laure Diebold</p>
           <p>69009 Lyon, France</p>
-          <p>10 20 30 40 50</p>
+          <a href="tel:+331020304050" id='mail-to'>10 20 30 40 50</a>
           <a href="mailto:john.doe@gmail.com" id='mail-to'>john.doe@gmail.com</a>
         </div>
         <div id='footer-2'>
