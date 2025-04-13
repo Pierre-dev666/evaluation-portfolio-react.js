@@ -8,8 +8,9 @@ import Contact from "./pages/Contact";
 import LegalNotices from "./pages/LegalNotices";
 import { fallDown as Menu } from 'react-burger-menu';
 import './App.css';
-
-
+import GithubLink from './assets/images/github.svg';
+import TwitterLink from './assets/images/twitter.svg';
+import LinkedinLink from './assets/images/linkedin.svg';
 
 let styles = {
   bmMenuWrap: {
@@ -23,16 +24,14 @@ let styles = {
     background: 'rgba(0, 0, 0, 0)'
   }
 }
-
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
-
 }
+
 export default function App() {
   return (
     <div className="App">
@@ -75,6 +74,11 @@ export default function App() {
           <p>69009 Lyon, France</p>
           <a href="tel:+331020304050" id='mail-to'>10 20 30 40 50</a>
           <a href="mailto:john.doe@gmail.com" id='mail-to'>john.doe@gmail.com</a>
+          <span id='social-networks'>
+            <a href='https://github.com/github-john-doe' className='social-networks_footer' target="_blank"><img src={GithubLink} className='social-networks_image'></img></a>
+            <a href='https://x.com/?lang=fr' className='social-networks_footer' target="_blank"><img src={TwitterLink} className='social-networks_image'></img></a>
+            <a href='https://fr.linkedin.com' className='social-networks_footer' target="_blank"><img src={LinkedinLink} className='social-networks_image'></img></a>
+          </span>
         </div>
         <div id='footer-2'>
           <p><strong>Liens utiles</strong></p>
