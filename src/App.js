@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, {useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, NavLink, useLocation} from "react-router-dom";
 import Home from "./pages/Home";
 import Services from "./pages/Services";

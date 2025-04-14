@@ -45,10 +45,15 @@ const Home = () => {
                     <img src="https://avatars.githubusercontent.com/u/19842736?v=4" id='modale_grid-part1'></img>
                     <ul id='modale_grid-part2'>
                         <span className='modale_boxes'><img className='modale-img' src={personIco}/>{user.name}</span>
+                        <hr />
                         <span className='modale_boxes'><img className='modale-img' src={geoAltIco}/>{user.location}</span>
+                        <hr />
                         <span className='modale_boxes'><img className='modale-img' src={fileText}/>{user.bio}</span>
+                        <hr />
                         <span className='modale_boxes'><img className='modale-img' src={boxIco}/>{user.public_repos}</span>
+                        <hr />
                         <span className='modale_boxes'><img className='modale-img' src={peopleIco}/>{user.followers}</span>
+                        <hr />
                         <span className='modale_boxes'><img className='modale-img' src={peopleIco}/>{user.following}</span>
                     </ul>
                 </div>

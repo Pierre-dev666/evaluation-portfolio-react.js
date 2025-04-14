@@ -1,3 +1,5 @@
+/* Start of the common part of the pages */
+
 @font-face {
   font-family: "NunitoSans";
   src: url('./assets/fonts/NunitoSans-Regular.woff');
@@ -76,7 +78,7 @@ a {
   text-transform: uppercase;
   margin: 10px;
   font-size: large;
-  text-align: left;
+  text-align: center;
 }
 
 a:hover {
@@ -217,8 +219,9 @@ textarea {
   margin-right: -4px;
   top: 56px;
 }
+/* End of the common part of the pages */
 
-/* Beginning of CSS home page*/
+/* Start of CSS home page*/
 #main {
   width: 100%;
   height: 100%;
@@ -229,8 +232,8 @@ textarea {
   position: fixed;
   height: 50%;
   width: 50%;
-  align-self: anchor-center;
-  justify-self: anchor-center;
+  align-self: center;
+  justify-self: center;
   background-color: #212529;
   z-index: 1;
   border: 1px solid #adb5bd;
@@ -249,7 +252,7 @@ textarea {
   height: 2px;
   color: #0d6efd;
   border: 1px solid #adb5bd;
-
+  margin: 0px;
 }
 
 #modale-close {
@@ -293,8 +296,8 @@ textarea {
 
 #modale_grid {
   display: grid;
-  height: 300px;
-  width: 650px;
+  height: 60%;
+  width: 90%;
   justify-self: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: minmax(100px, auto);
@@ -323,7 +326,7 @@ textarea {
 .modale_boxes{
   display: flow-root;
   color: #fff;
-  font-size: large;
+  font-size: small;
   margin: 4px 0px;
 }
 .modale-img {
@@ -447,7 +450,7 @@ textarea {
 
 /* End of CSS home page*/
 
-/* Beginning of CSS services page*/
+/* Start of CSS services page*/
 
 #services-grid {
   display: grid;
@@ -548,7 +551,7 @@ textarea {
 /* End of CSS services page*/
 
 
-/* Beginning of CSS achievements page*/
+/* Start of CSS achievements page*/
 
 #achievements-grid {
   display: grid;
@@ -734,7 +737,7 @@ textarea {
 /* End of CSS achievements page*/
 
 
-/* Beginning of CSS contact page*/
+/* Start of CSS contact page*/
 #contact-title {
   justify-self: center;
   width: 90%;
@@ -847,7 +850,7 @@ fieldset div input {
 
 /* End of CSS contact page*/
 
-/* Beginning of CSS legal notices page*/
+/* Start of CSS legal notices page*/
 
 #legalnotices_h3 {
   width: initial;
@@ -897,8 +900,9 @@ fieldset div input {
 
 /* End of CSS legal notices page*/
 
-/* Beginning of responsive design */
-/* Beginning of mobile design */
+/* Start of responsive design */
+
+/* Start of mobile design */
 @media only screen and (max-width : 767px) {
   #no-burger-menu {
     display: none;
@@ -918,7 +922,35 @@ fieldset div input {
     height: 90%;
     width: 80%;
   }
+  #modale_grid {
+    display: grid;
+    height: 76%;
+    width: 90%;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  #modale_grid-part1 {
+    width: 100%;
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  #modale_grid-part2 {
+    height: 100%;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    text-align: left;
+    padding-left: 0px;
+  }
+  .modale_boxes {
+    font-size: x-small;
 
+}
   .App-footer {
     display: grid;
     grid-template-columns: 100%;
@@ -1052,7 +1084,7 @@ fieldset div input {
 
 /* End of mobile design */
 
-/* Beginning of tablet design */
+/* Start of tablet design */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1223px) and (orientation : landscape) {
   #no-burger-menu {
     display: none;
@@ -1067,6 +1099,10 @@ fieldset div input {
     font-weight: bold;
     color: #0051ff;
   }
+  #modale {
+    height: 70%;
+    width: 70%;
+}
 
   .App-footer {
     display: grid;
@@ -1115,7 +1151,7 @@ fieldset div input {
 
 /* End of tablet design */
 
-/* Beginning of desktop design */
+/* Start of desktop design */
 @media only screen and (min-width : 1224px) {
   #with-burger-menu {
     display: none;
