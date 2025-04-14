@@ -1,5 +1,11 @@
 import imageHomePage from '../assets/images/john-doe-about.jpg';
 import modaleCloseCross from '../assets/images/x.svg';
+import personIco from '../assets/images/person.svg';
+import geoAltIco from '../assets/images/geo-alt.svg';
+import fileText from '../assets/images/file-text.svg';
+import boxIco from '../assets/images/box.svg';
+import peopleIco from '../assets/images/people.svg';
+import React, { useState, useEffect } from 'react';
 
 function homeButton(event) {
     let elem = document.getElementById("modale");
@@ -16,6 +22,17 @@ function modaleButton(event) {
 }
 
 const Home = () => {
+    const [user, setUsers] = useState([]);
+
+
+    const getUserInformation = async () => {
+        const res = await fetch("https://api.github.com/users/github-john-doe");
+        const json = await res.json();
+        setUsers(json);
+    }
+    useEffect(() => {
+        getUserInformation();
+    });
     return (
         <div id="main">
             <dialog id="modale"><p id='modale-title'>Mon profil Github</p>
@@ -24,6 +41,17 @@ const Home = () => {
                     </img>
                 </button>
                 <hr />
+                <div id='modale_grid'>
+                    <img src="https://avatars.githubusercontent.com/u/19842736?v=4" id='modale_grid-part1'></img>
+                    <ul id='modale_grid-part2'>
+                        <span className='modale_boxes'><img className='modale-img' src={personIco}/>{user.name}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={geoAltIco}/>{user.location}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={fileText}/>{user.bio}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={boxIco}/>{user.public_repos}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={peopleIco}/>{user.followers}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={peopleIco}/>{user.following}</span>
+                    </ul>
+                </div>
                 <button onClick={modaleButton} id='modale-button'>Fermer</button>
             </dialog>
             <div id="home_part-1">
@@ -48,23 +76,23 @@ const Home = () => {
                     <h3>Mes Comprétences</h3>
                     <div className="skill">
                         <legend>HTML5 90%</legend>
-                        <div class="progress">
+                        <div className="progress">
                             <div id="progress-bar_html5"></div>
                         </div>
                         <legend>CSS3 80%</legend>
-                        <div class="progress">
+                        <div className="progress">
                             <div id="progress-bar_css3"></div>
                         </div>
                         <legend>JAVASCRIPT 70%</legend>
-                        <div class="progress">
+                        <div className="progress">
                             <div id="progress-bar_javascript"></div>
                         </div>
                         <legend>PHP 60%</legend>
-                        <div class="progress">
+                        <div className="progress">
                             <div id="progress-bar_php"></div>
                         </div>
                         <legend>REACT 50%</legend>
-                        <div class="progress">
+                        <div className="progress">
                             <div id="progress-bar_react"></div>
                         </div>
                     </div>
