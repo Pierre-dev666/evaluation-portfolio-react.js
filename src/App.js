@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect } from 'react';
-import { Routes, Route, NavLink, useLocation} from "react-router-dom";
+import { Routes, Route, NavLink, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Achievements from "./pages/Achievements";
 import Contact from "./pages/Contact";
 import LegalNotices from "./pages/LegalNotices";
-import { fallDown as Menu } from 'react-burger-menu';
+import { slide as Menu } from "react-burger-menu";
 import './App.css';
 import GithubLink from './assets/images/github.svg';
 import TwitterLink from './assets/images/twitter.svg';
@@ -34,35 +34,42 @@ function ScrollToTop() {
   return null;
 }
 
-
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const handleCloseMenu = (event) => {
+    setIsMenuOpen(false);
+  };
+  const handleStateChange = (state) => {
+    setIsMenuOpen(state.isOpen);
+  };
 
   return (
     <div className="App">
       <header className="App-header">
         <nav id='navbar' className="navbar navbar-dark bg-dark">
-          <span className="navbar-brand mb-0 h1" id='logo'>JOHN DOE</span>
+          <NavLink to="/" activeclassname="active" className="navbar-brand mb-0 h1" id='logo'>JOHN DOE</NavLink>
           <div id='with-burger-menu'>
-            <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} right width={'102%'} styles={styles}>
-              <NavLink to="/" activeClassName="active">Accueil</NavLink>
-              <NavLink to="/services" activeClassName="active">Services</NavLink>
-              <NavLink to="/achievements" activeClassName="active">Réalisations</NavLink>
-              <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-              <NavLink to="/legal-notices" activeClassName="active">Mentions légales</NavLink>
+
+            <Menu pageWrapId={"page-wrap"} right width={'102%'} styles={styles} isOpen={isMenuOpen} onStateChange={handleStateChange}>
+              <NavLink to="/" activeclassname="active" onClick={handleCloseMenu}>Accueil</NavLink>
+              <NavLink to="/services" activeclassname="active" onClick={handleCloseMenu}>Services</NavLink>
+              <NavLink to="/achievements" activeclassname="active" onClick={handleCloseMenu}>Réalisations</NavLink>
+              <NavLink to="/contact" activeclassname="active" onClick={handleCloseMenu}>Contact</NavLink>
+              <NavLink to="/legal-notices" activeclassname="active" onClick={handleCloseMenu}>Mentions légales</NavLink>
 
             </Menu>
           </div>
           <div id='no-burger-menu'>
-            <NavLink to="/" activeClassName="active" >Accueil</NavLink>
-            <NavLink to="/services" activeClassName="active">Services</NavLink>
-            <NavLink to="/achievements" activeClassName="active">Réalisations</NavLink>
-            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-            <NavLink to="/legal-notices" activeClassName="active">Mentions légales</NavLink>
+            <NavLink to="/" activeclassname="active" >Accueil</NavLink>
+            <NavLink to="/services" activeclassname="active">Services</NavLink>
+            <NavLink to="/achievements" activeclassname="active">Réalisations</NavLink>
+            <NavLink to="/contact" activeclassname="active">Contact</NavLink>
+            <NavLink to="/legal-notices" activeclassname="active">Mentions légales</NavLink>
 
           </div>
         </nav>
       </header>
-      <main className="Appbody" id="page-wrap">
+      <main className="Appbody" id="page-wrap" onClick={handleCloseMenu}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/services" element={<Services />}></Route>
@@ -87,20 +94,20 @@ export default function App() {
         </div>
         <div id='footer-2'>
           <p><strong>Liens utiles</strong></p>
-          <NavLink to="/" activeClassName="active"><ScrollToTop />Accueil</NavLink>
-          <NavLink to="/services" activeClassName="active">Services</NavLink>
-          <NavLink to="/achievements" activeClassName="active">Réalisations</NavLink>
-          <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-          <NavLink to="/legal-notices" activeClassName="active">Mentions légales</NavLink>
+          <NavLink to="/" activeclassname="active"><ScrollToTop />Accueil</NavLink>
+          <NavLink to="/services" activeclassname="active">Services</NavLink>
+          <NavLink to="/achievements" activeclassname="active">Réalisations</NavLink>
+          <NavLink to="/contact" activeclassname="active">Contact</NavLink>
+          <NavLink to="/legal-notices" activeclassname="active">Mentions légales</NavLink>
         </div>
         <div id='footer-3'>
           <p><strong>Mes dernières réalisations</strong></p>
-          <a href="/achievements#achievements_card-1" activeClassName="active">Fresh Food</a>
-          <a href="/achievements#achievements_card-2" activeClassName="active">Restaurant Akira</a>
-          <a href="/achievements#achievements_card-3" activeClassName="active">Espace bien-être</a>
-          <a href="/achievements#achievements_card-4" activeClassName="active">SEO</a>
-          <a href="/achievements#achievements_card-5" activeClassName="active">Création d'une API</a>
-          <a href="/achievements#achievements_card-6" activeClassName="active">Maquette d'un site web</a>
+          <a href="/achievements#achievements_card-1" activeclassname="active">Fresh Food</a>
+          <a href="/achievements#achievements_card-2" activeclassname="active">Restaurant Akira</a>
+          <a href="/achievements#achievements_card-3" activeclassname="active">Espace bien-être</a>
+          <a href="/achievements#achievements_card-4" activeclassname="active">SEO</a>
+          <a href="/achievements#achievements_card-5" activeclassname="active">Création d'une API</a>
+          <a href="/achievements#achievements_card-6" activeclassname="active">Maquette d'un site web</a>
         </div>
       </footer>
     </div>

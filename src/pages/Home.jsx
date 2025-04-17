@@ -32,7 +32,8 @@ const Home = () => {
     }
     useEffect(() => {
         getUserInformation();
-    });
+ 
+    }, []);
     return (
         <div id="main">
             <dialog id="modale"><p id='modale-title'>Mon profil Github</p>

@@ -17,13 +17,13 @@ const LegalNotices = () => {
         <div id="main">
             <div id='legalnotices_main'>
                 <h3 id="legalnotices_h3">Mentions légales</h3>
-                <div class="accordion" id="myAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">Editeur du site</button>
+                <div className="accordion" id="myAccordion">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingOne">
+                            <button type="button" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">Editeur du site</button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                            <div class="card-body">
+                        <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                            <div className="card-body">
                                 <p><strong>John Doe</strong></p>
                                 <span className='contact-details_boxes'><img src={mapIco}></img><p>40 rue Laure Diebold</p></span>
                                 <span className='contact-details_boxes'><img src={geoAltIco}></img><p>69009 Lyon, France</p></span>
@@ -33,12 +33,12 @@ const LegalNotices = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Hébergeur</button>
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingTwo">
+                            <button type="button" className="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Hébergeur</button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
-                            <div class="card-body">
+                        <div id="collapseTwo" className="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                            <div className="card-body">
                                 <p><strong>alwaysdata</strong></p>
                                 <p>91 Rue du Faubourg Saint-Honoré, 75008 Paris</p>
                                 <span className='contact-details_boxes'><img src={globeIco} className='contact_ico'></img><a href="mailto:https://www.alwaysdata.com" id='mail-to'>
@@ -46,12 +46,12 @@ const LegalNotices = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Crédits</button>
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingThree">
+                            <button type="button" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Crédits</button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                            <div class="card-body">
+                        <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                            <div className="card-body">
                                 <p><strong>Crédits</strong></p>
                                 <p>Ce site a été réalisé par John Doe au <a href="https://eleve.centre-europeen-formation.fr" className='site-link' target='blank'>
                                     Centre Européen de formation</a></p>
