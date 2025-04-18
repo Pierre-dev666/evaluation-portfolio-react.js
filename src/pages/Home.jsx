@@ -23,8 +23,6 @@ function modaleButton(event) {
 
 const Home = () => {
     const [user, setUsers] = useState([]);
-
-
     const getUserInformation = async () => {
         const res = await fetch("https://api.github.com/users/github-john-doe");
         const json = await res.json();
