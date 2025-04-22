@@ -5,12 +5,17 @@ import geoAltIco from '../assets/images/geo-alt.svg';
 import fileText from '../assets/images/file-text.svg';
 import boxIco from '../assets/images/box.svg';
 import peopleIco from '../assets/images/people.svg';
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import "../assets/css/Home.css";
+
+
 
 function homeButton(event) {
     let elem = document.getElementById("modale");
+
     if (event) {
-        elem.style = "display: block;";
+            elem.style = "display: block;";
+
     }
 }
 
@@ -18,8 +23,10 @@ function modaleButton(event) {
     let elem = document.getElementById("modale");
     if (event) {
         elem.style = "display: none;";
+
     }
 }
+
 
 const Home = () => {
     const [user, setUsers] = useState([]);
@@ -30,12 +37,13 @@ const Home = () => {
     }
     useEffect(() => {
         getUserInformation();
- 
+
     }, []);
+ 
     return (
-        <div id="main">
+        <div id="main" onMouseDown={modaleButton}>
             <dialog id="modale"><p id='modale-title'>Mon profil Github</p>
-                <button onClick={modaleButton} id='modale-close'>
+                <button onMouseUp={modaleButton} id='modale-close'>
                     <img src={modaleCloseCross} id='modale-cross'>
                     </img>
                 </button>
@@ -43,27 +51,27 @@ const Home = () => {
                 <div id='modale_grid'>
                     <img src="https://avatars.githubusercontent.com/u/19842736?v=4" id='modale_grid-part1'></img>
                     <ul id='modale_grid-part2'>
-                        <span className='modale_boxes'><img className='modale-img' src={personIco}/>{user.name}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={personIco} />{user.name}</span>
                         <hr />
-                        <span className='modale_boxes'><img className='modale-img' src={geoAltIco}/>{user.location}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={geoAltIco} />{user.location}</span>
                         <hr />
-                        <span className='modale_boxes'><img className='modale-img' src={fileText}/>{user.bio}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={fileText} />{user.bio}</span>
                         <hr />
-                        <span className='modale_boxes'><img className='modale-img' src={boxIco}/>{user.public_repos}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={boxIco} />{user.public_repos}</span>
                         <hr />
-                        <span className='modale_boxes'><img className='modale-img' src={peopleIco}/>{user.followers}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={peopleIco} />{user.followers}</span>
                         <hr />
-                        <span className='modale_boxes'><img className='modale-img' src={peopleIco}/>{user.following}</span>
+                        <span className='modale_boxes'><img className='modale-img' src={peopleIco} />{user.following}</span>
                     </ul>
                 </div>
-                <button onClick={modaleButton} id='modale-button'>Fermer</button>
+                <button onMouseUp={modaleButton} id='modale-button'>Fermer</button>
             </dialog>
             <div id="home_part-1">
                 <div id="home-background_part-1">
                     <h1>Bonjour, je suis John Doe</h1>
                     <h2>Développeur web full stack</h2>
                 </div>
-                <button onClick={homeButton} id='home-button'>En savoir plus</button>
+                <button onMouseUp={homeButton} id='home-button'>En savoir plus</button>
             </div>
             <div id="home_part-2">
                 <div id="home_part-2_subpart-1">

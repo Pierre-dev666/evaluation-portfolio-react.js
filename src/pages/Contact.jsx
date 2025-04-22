@@ -2,6 +2,8 @@ import mapIco from '../assets/images/map.svg';
 import geoAltIco from '../assets/images/geo-alt.svg';
 import phoneIco from '../assets/images/phone.svg';
 import envelopeAtIco from '../assets/images/envelope-at.svg';
+import "../assets/css/Contact.css";
+
 const Contact = () => {
     return (
         <div id="main">

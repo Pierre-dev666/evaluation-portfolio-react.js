@@ -5,6 +5,7 @@ import wellnessArea from '../assets/images/portfolio/espace-bien-etre.jpg';
 import seo from '../assets/images/portfolio/seo.jpg';
 import code from '../assets/images/portfolio/coder.jpg';
 import screens from '../assets/images/portfolio/screens.jpg';
+import "../assets/css/Achievements.css";
 
 const Achievements = () => {
     return (

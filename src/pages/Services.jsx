@@ -2,7 +2,7 @@ import bannerServicesPage from '../assets/images/banner.jpg';
 import brushIco from '../assets/images/brush.svg';
 import codeSlashIco from '../assets/images/code-slash.svg';
 import searchIco from '../assets/images/search.svg';
-
+import "../assets/css/Services.css";
 
 const Services = () => {
     return (

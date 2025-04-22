@@ -33,19 +33,27 @@ function ScrollToTop() {
 
   return null;
 }
+function modaleButton(event) {
+  let elem = document.getElementById("modale");
+  if (event) {
+    elem.style = "display: none;";
 
+  }
+}
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const handleCloseMenu = (event) => {
     setIsMenuOpen(false);
+
   };
   const handleStateChange = (state) => {
     setIsMenuOpen(state.isOpen);
+
   };
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" onMouseDown={modaleButton}>
         <nav id='navbar' className="navbar navbar-dark bg-dark">
           <NavLink to="/" activeclassname="active" className="navbar-brand mb-0 h1" id='logo'>JOHN DOE</NavLink>
           <div id='with-burger-menu'>
@@ -79,7 +87,7 @@ export default function App() {
 
         </Routes>
       </main >
-      <footer className="App-footer">
+      <footer className="App-footer" onMouseDown={modaleButton}>
         <div id='footer-1'>
           <p><strong>John Doe</strong></p>
           <p>40 rue Laure Diebold</p>

@@ -1,0 +1,184 @@
+/* Start of CSS achievements page*/
+
+#achievements-grid {
+    display: grid;
+    height: 100%;
+    width: 90%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    justify-self: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#achievements_card-1 {
+    display: table;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px hidden #adb5bd;
+    border-radius: 6px;
+    box-shadow: 0px 4px 16px 2px #ced4da;
+    display: grid;
+    align-content: space-between;
+}
+
+#achievements_card-2 {
+    display: table;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px hidden #adb5bd;
+    border-radius: 6px;
+    box-shadow: 0px 4px 16px 2px #ced4da;
+    display: grid;
+    align-content: space-between;
+}
+
+#achievements_card-3 {
+    display: table;
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px hidden #adb5bd;
+    border-radius: 6px;
+    box-shadow: 0px 4px 16px 2px #ced4da;
+    display: grid;
+    align-content: space-between;
+}
+
+#achievements_card-4 {
+    display: table;
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    border: 1px hidden #adb5bd;
+    border-radius: 6px;
+    box-shadow: 0px 4px 16px 2px #ced4da;
+    display: grid;
+    align-content: space-between;
+}
+
+#achievements_card-5 {
+    display: table;
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    border: 1px hidden #adb5bd;
+    border-radius: 6px;
+    box-shadow: 0px 4px 16px 2px #ced4da;
+    display: grid;
+    align-content: space-between;
+}
+
+#achievements_card-6 {
+    display: table;
+    grid-column: 3;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    border: 1px hidden #adb5bd;
+    border-radius: 6px;
+    box-shadow: 0px 4px 16px 2px #ced4da;
+    display: grid;
+    align-content: space-between;
+}
+
+.achievements_h3 {
+    border-bottom: none;
+
+    margin-bottom: initial;
+}
+
+.achievements_p {
+    margin: 10px 20px;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+#achievements-hr {
+    width: 35%;
+}
+
+.achievements_card-header {
+    display: block;
+    width: 100%;
+    height: 90%;
+    object-fit: fill;
+    justify-self: center;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.achievements_card-body {
+    display: contents;
+}
+
+.achievements_card-footer {
+    background-color: #efefef;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.achievements-footer_p {
+    font-size: small;
+    color: gray;
+    padding: 8px 0px;
+    margin-bottom: initial;
+}
+
+.achievements_a {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.achievements_a a {
+    background-color: #0d6efd;
+    padding: 10px 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: small;
+}
+
+.achievements_a a:hover {
+    background-color: #0a58ca;
+}
+
+#achievements_card-1:hover {
+    background-color: #efefef;
+    box-shadow: 0px 4px 16px 2px #6c757d;
+}
+
+#achievements_card-2:hover {
+    background-color: #efefef;
+    box-shadow: 0px 4px 16px 2px #6c757d;
+}
+
+#achievements_card-3:hover {
+    background-color: #efefef;
+    box-shadow: 0px 4px 16px 2px #6c757d;
+}
+
+#achievements_card-4:hover {
+    background-color: #efefef;
+    box-shadow: 0px 4px 16px 2px #6c757d;
+}
+
+#achievements_card-5:hover {
+    background-color: #efefef;
+    box-shadow: 0px 4px 16px 2px #6c757d;
+}
+
+#achievements_card-6:hover {
+    background-color: #efefef;
+    box-shadow: 0px 4px 16px 2px #6c757d;
+}
+
+/* End of CSS achievements page*/

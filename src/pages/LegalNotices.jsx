@@ -4,6 +4,7 @@ import geoAltIco from '../assets/images/geo-alt.svg';
 import phoneIco from '../assets/images/phone.svg';
 import envelopeAtIco from '../assets/images/envelope-at.svg';
 import globeIco from '../assets/images/globe.svg';
+import "../assets/css/LegalNotices.css";
 
 
 

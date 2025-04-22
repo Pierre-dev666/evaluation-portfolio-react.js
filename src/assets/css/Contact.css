@@ -1,0 +1,119 @@
+/* Start of CSS contact page*/
+#contact-title {
+    justify-self: center;
+    width: 90%;
+    margin-top: 10px;
+}
+
+#contact-title h3 {
+    width: initial;
+    border-bottom: initial;
+    margin-bottom: initial;
+}
+
+#contact-grid {
+    display: grid;
+    height: 100%;
+    width: 90%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    justify-self: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: minmax(100px, auto);
+    border: 1px hidden #adb5bd;
+    border-radius: 6px;
+    box-shadow: 0px 4px 16px 2px #ced4da;
+    margin-bottom: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#contact_part-1 {
+    display: table;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+
+}
+
+fieldset div {
+    margin-bottom: 10px;
+}
+
+fieldset div input {
+    width: 100%;
+    border: 1px solid black;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid black;
+  }
+
+#button {
+    justify-self: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#button input {
+    background-color: #0d6efd;
+    border: 0px solid #000;
+    border-radius: 6px;
+    color: #fff;
+    padding: 6px 10px;
+}
+
+#button input:hover {
+    background-color: #0a58ca;
+}
+
+#contact_part-2 {
+    display: table;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+}
+
+#contact_part-2 strong {
+    color: rgb(0, 0, 0);
+}
+
+
+#contact_part-2 p {
+    justify-self: left;
+    margin-left: 10px;
+}
+
+#contact_part-2 a {
+    color: #000;
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+#contact_part-2 iframe {
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.contact-details_boxes {
+    display: flex;
+    margin: 12px 0px;
+}
+
+.contact-details_boxes img {
+    margin: 0px 10px;
+    width: 24px;
+}
+
+.contact-details_boxes p {
+    margin: 0px;
+}
+
+/* End of CSS contact page*/
